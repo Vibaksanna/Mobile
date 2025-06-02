@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CourseCard extends StatelessWidget {
+  const CourseCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -38,7 +40,6 @@ class CourseCard extends StatelessWidget {
               ),
               const SizedBox(height: 4.0),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Icon(
                     Icons.network_wifi_1_bar_outlined,
@@ -46,23 +47,29 @@ class CourseCard extends StatelessWidget {
                     color: Colors.grey[600],
                   ),
                   const SizedBox(width: 4),
-                  const Text(
-                    'កំរិតដំបូង',
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      fontFamily: 'Ubuntu',
-                      color: Colors.grey,
+                  const Flexible(
+                    child: Text(
+                      'កំរិតដំបូង',
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        fontFamily: 'Ubuntu',
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
                   const SizedBox(width: 8),
-                  Icon(Icons.groups_2, size: 13.0, color: Colors.grey[600]),
+                  Icon(Icons.groups_2, size: 13.0, color: Colors.grey),
                   const SizedBox(width: 4),
-                  const Text(
-                    '99 នាក់បានរៀន',
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      fontFamily: 'Ubuntu',
-                      color: Colors.grey,
+                  const Flexible(
+                    child: Text(
+                      '99 នាក់បានរៀន',
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        fontFamily: 'Ubuntu',
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
                 ],
